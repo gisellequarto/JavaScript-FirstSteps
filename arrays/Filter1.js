@@ -7,6 +7,7 @@ const produtos = [
 
 let filtroPreco = p => p.preco > 500
 let filtroFragil = p => p.fragil
+ 
 
 
 console.log(produtos.filter(filtroPreco).filter(filtroFragil))
