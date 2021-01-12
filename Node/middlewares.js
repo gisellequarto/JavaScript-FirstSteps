@@ -15,8 +15,8 @@ const step3 = ctx => ctx.valor3 = "mid3";
 
 const execute = (ctx, ...middlewares) => {
     const execStep = index => {
-        middlewares && index < middlewares.length && 
-                middlewares[index](ctx, () => execStep(index + 1))
+        middlewares && index < middlewares.length &&
+            middlewares[index](ctx, () => execStep(index + 1))
     }
     execStep(0);
 }
