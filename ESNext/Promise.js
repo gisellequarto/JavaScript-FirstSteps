@@ -7,5 +7,5 @@ function talkafter(seconds, phrase) {
 }
  
 talkafter(5, "Nice!")
-    .then(phrase => phrase.concat('?!?'))
-    .then(otherphrase => console.log(otherphrase));
+.then(phrase => phrase.concat('?!?'))
+.then(otherphrase => console.log(otherphrase));
