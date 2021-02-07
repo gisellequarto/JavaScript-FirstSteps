@@ -1,0 +1,54 @@
+<table>
+    <caption>Products</caption>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ipad</td>
+            <td>€350,00</td>
+            <td>3</td>
+            <td>€1050,00</td>
+        </tr>
+        <tr>
+            <td>Mobile</td>
+            <td>€150,00</td>
+            <td>4</td>
+            <td>€600,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <!-- 3 columns -->
+            <td colspan="3" rowspan="2">Total</td>
+            <td>€1650,00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table{
+        border-collapse: collapse;
+        text-align: center;
+    }
+    th, td {
+        padding: 10px;
+    }
+    thead {
+        border-bottom: solid 3px #444;
+    }
+    /* Turns gray when mouse goes on */
+    tbody tr:hover {
+        background-color: #dedede;
+    }
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>

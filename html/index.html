@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>HTML Exercises:</h1>
@@ -19,7 +21,10 @@
         <a href wm-nav="exercises/test.html">00 - Test</a> |
         <a href wm-nav="exercises/text1.html">01 - Text 1</a> |
         <a href wm-nav="exercises/text2.html">02 - Text 2</a> |
-        <a href wm-nav="exercises/list.html">03 - List</a> |
+        <a href wm-nav="exercises/lists.html">03 - Lists</a> |
+        <a href wm-nav="exercises/listNested.html">04 - Nested List</a> |
+        <a href wm-nav="exercises/links.html">05 - Links</a> |
+        <a href wm-nav="exercises/table.html">06 - Table</a> |
     </nav>
     <section id='content'></section>
     <footer>
@@ -28,15 +33,16 @@
     <script>
         document.querySelectorAll('[wm-nav]').forEach(link => {
             const content = document.getElementById('content');
-            
-            link.onclick = function(e) {
+
+            link.onclick = function (e) {
                 e.preventDefault();
-                
+
                 fetch(link.getAttribute('wm-nav'))
                     .then(resp => resp.text())
                     .then(html => content.innerHTML = html);
             }
         })
-    </script>    
+    </script>
 </body>
+
 </html>
