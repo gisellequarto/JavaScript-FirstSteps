@@ -73,7 +73,7 @@
                 image.style.left = actualLeft + 5;
                 resolve();
 
-            }, 45);
+            }, 7);
 
         })
     }
@@ -97,7 +97,7 @@
         for (const image of images) {
             await show(image);
 
-            while (image.getBoundingClientRect().left < 1300) {
+            while (image.getBoundingClientRect().left + image.clientWidth < innerWidth - 10) {
                 await changePosition(image);
             }
 
@@ -105,7 +105,8 @@
             image.style.left = 0;
         }
     }
-    document.querySelectorAll('[wm-slider]').forEach(async function(element) {
+
+    document.querySelectorAll('[wm-slider]').forEach(async function (element) {
         const p = document.getElementsByTagName("p");
 
         const images = [].slice.call(p);
