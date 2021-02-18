@@ -9,9 +9,30 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- onclick="navegarEm5s(event)" muito explícito, porém dificulta o reuso de código-->
+        <a espera-um-pouco href="https://google.com.br">Google</a>
     </div>
     <script>
-        // ...
+
+        function navegarEm5s(e) {
+
+            /* parar o comportamento padrão do click */
+            e.preventDefault()
+
+            console.log('Saindo em 5s...')
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+            }, 5000)
+        }
+        // pouco explícito
+        // const a = document.querySelector('a')
+        // a.onclick = navegarEm5s
+
+        /* atributo personalizado é melhor do que classe (geralmente usada para estilo)... 
+        já que atributo personalizado é apenas interpretado por JS e não pelo browser */
+        const a = document.querySelector('[espera-um-pouco]')
+        a.onclick = navegarEm5s
+
     </script>
 </body>
