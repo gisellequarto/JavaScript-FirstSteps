@@ -25,10 +25,10 @@ const upload = multer({ storage }).single('arquivo');
 app.post('/upload', (req, res) => {
     upload(req, res, err => {
         if (err) {
-            return res.end('Ocorreu um erro.')
+            return res.end('Ocorreu um erro.');
         }
 
-        res.end('Concluído com sucesso.')
+        res.end('Concluído com sucesso.');
     })
 })
 
