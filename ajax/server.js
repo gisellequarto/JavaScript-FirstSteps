@@ -9,11 +9,13 @@ app.use(bodyParser.json());
 
 const multer = require('multer')
 
+/* salvar arquivos e garantir que eles terão nomes diferentes */
 const storage = multer.diskStorage({
     destination: function(req, file, callback) {
         callback(null, './upload')
     },
     filename: function(req, file, callback) {
+        /* concatenar a data com o nome do arquivo original */
         callback(null, `${Date.now()}_${file.originalname}`)
     }
 })
