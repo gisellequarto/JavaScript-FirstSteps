@@ -7,6 +7,18 @@ app.use(express.static('.'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+const multer = require('multer')
+
+const storage = multer.diskStorage({
+    destination: function(req, file, callback) {
+        callback(null, './upload')
+    },
+    filename: function(req, file, callback) {
+        callback(null, `${Date.now()}_${file.originalname}`)
+    }
+})
+
+const upload = multer({ storage }).single('arquivo')
 
 app.get('/teste', (req, resp) => resp.send('OK! Servidor está on!'));
 
