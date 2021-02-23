@@ -12,8 +12,12 @@ function appHTML() {
         .pipe(gulp.dest('build'));
 }
 
-function appCSS(cb) {
-    return cb();
+function appCSS() {
+    return gulp.src('src/assets/sass/index.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(uglifycss({ "uglyComments": true }))
+        .pipe(concat('app.min.css'))
+        .pipe(gulp.dest('build/assets/css'));
 }
 
 
