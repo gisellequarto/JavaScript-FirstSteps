@@ -21,8 +21,12 @@ function appCSS() {
 }
 
 
-function appJS(cb) {
-    return cb();
+function appJS() {
+    return gulp.src('src/assets/js/**/*.js')
+        .pipe(babel({ presets: ['ENV'] }))
+        .pipe(uglify())
+        .pipe(concat('app.min.js'))
+        .pipe(gulp.dest('build/assets/js'));
 }
 
 
@@ -31,8 +35,8 @@ function appIMG(cb) {
 }
 
 module.exports = {
-    appHTML, 
-    appCSS, 
-    appJS, 
+    appHTML,
+    appCSS,
+    appJS,
     appIMG
 }
