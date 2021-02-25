@@ -19,7 +19,21 @@
             { nome: 'Carlos', nota: 7.6 },
             { nome: 'Julia', nota: 9.7 }
         ]
+
+
+        const linhas = pessoas.map(pessoa => {
+            const row = $('<tr>');
+
+            const nome = $('<td>').append(`${pessoa.nome}`);
+            const nota = $('<td>').append(`${pessoa.nota}`);
+
+            return row.append(nome).append(nota);
+        })
+
+        const tabela = $('<table>').append(linhas).css('border', 'solid 5px');
+
+        $('#conteudo').append(tabela);
         
-        // ...
+
     </script>
 </body>
