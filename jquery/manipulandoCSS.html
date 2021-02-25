@@ -12,7 +12,6 @@
     <h1>Manipulando CSS</h1>
     <div id='div1'>1</div>
     <div id='div2'>2</div>
-    <div id='div3'>3</div>
     <div id='resultado'></div>
     <script>
         const fonte = $('#div1').css('font-family')
@@ -30,6 +29,8 @@
         $('#resultado').append(`<br>Tem class? ${temClasse}`)
 
         $('#div2').removeClass('destaque')
+
+        // o toggle alterna.. se tem ele tira, se não tem ele adiciona.
         $('#div2').toggleClass('destaque')
         $('#div2').toggleClass('destaque')
     </script>
