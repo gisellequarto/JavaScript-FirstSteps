@@ -67,23 +67,59 @@
 
     <!-- Quebra de Linha -->
 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 bg-primary">1</div>
+            <div class="col-3 bg-danger">2</div>
+            <div class="col-7 bg-secondary">3</div> <!-- vai quebrar naturalmente pq passa de 12 -->
+            <!-- esta div com w-100 ocupa todo o espaço restante -->
+            <div class="w-100"></div>
+            <div class="col-3 bg-warning">4</div>
+        </div>
+    </div>
 
-
-    
     <h1 class="mt-5">4. Ordem</h1>
     <hr>
 
     <!-- Ordem -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- se não colocar a order ele fica em primeiro -->
+            <div class="col-4 bg-primary">1</div>
+            <div class="col-4 order-12 bg-danger">2</div>
+            <div class="col-4 order-1 bg-warning">3</div>
+        </div>
+    </div>
 
     <h1 class="mt-5">5. Offset</h1>
     <hr>
 
     <!-- Offset -->
 
+    <div class="container-fluid">
+        <div class="row">
+            <!-- pode usar o sm, md, lg para ser responsivo -->
+            <div class="col-3 offset-7 bg-primary">1</div>
+            <div class="col-4 offset-3 bg-danger">2</div>
+            <div class="col-6 offset-1 bg-warning">3</div>
+        </div>
+    </div>
+
     <h1 class="mt-5">6. Alinhamento</h1>
     <hr>
 
     <!-- Alinhamento -->
+
+    <div class="container-fluid">
+        <div class="row h-300">
+            <div class="col-4 align-self-end bg-primary">1</div>
+            <div class="col-4 align-self-center bg-danger">2</div>
+            <div class="col-4 align-self-start bg-warning">3</div>
+        </div>
+    </div>
+
+
 </div>
 
 <style>
