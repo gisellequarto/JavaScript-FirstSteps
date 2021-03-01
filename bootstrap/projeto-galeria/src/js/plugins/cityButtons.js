@@ -19,7 +19,7 @@ function filterByCity(city) {
     })
 }
 
-$fn.cityButtons = function () {
+$.fn.cityButtons = function () {
     const cities = new Set;
 
     $('[wm-city]').each(function (i, e) {
