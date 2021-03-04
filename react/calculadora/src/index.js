@@ -6,7 +6,10 @@ import Calculator from './main/Calculator';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <Calculator />,
+  <div>
+    <h1>Calculator</h1>
+    <Calculator />
+  </div>,
   document.getElementById('root')
 );
 
