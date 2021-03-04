@@ -66,7 +66,7 @@ export default class Calculator extends Component {
         }
 
         if(n === '.' && this.state.displayValue === '0') {
-            
+            console.log('need improve!')
         }
 
         const clearDisplay = this.state.displayValue === '0'
