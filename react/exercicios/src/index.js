@@ -6,12 +6,13 @@ import ReactDOM from 'react-dom';
 //import BomDia from './componentes/bomDia'
 //import { BoaTarde, BoaNoite } from './componentes/multiplos'
 //import Multi from './componentes/multiplos'
+//import Saudação from './componentes/saudação';
 
-import Saudação from './componentes/saudação';
+import Pai from './componentes/pai';
 
 ReactDOM.render(
     <div>
-        <Saudação tipo="Bom dia" nome="Sol"/>
+        <Pai nome="Paulo" sobrenome="Silva" />
     </div>
     , document.getElementById('root'));
 
