@@ -55,7 +55,7 @@ footer.footer {
     grid-area: footer;
 }
 
-/* @media(max-width: 768px) {
+@media(max-width: 768px) {
     .app {
         grid-template-rows:
             var(--header-height)
@@ -85,4 +85,4 @@ footer.footer {
             "content"
             "footer";
     }
-} */
+}
