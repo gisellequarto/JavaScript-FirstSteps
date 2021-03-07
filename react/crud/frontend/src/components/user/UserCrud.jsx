@@ -8,7 +8,7 @@ const headerProps = {
     subtitle: 'Cadastro de usuários: <CRUD>'
 }
 
-const baseUrl = 'http://localhost:3001/users'
+const baseUrl = 'http://192.168.1.223:3001/users'
 const initialState = {
     user: { name: '', email: '' },
     list: []
