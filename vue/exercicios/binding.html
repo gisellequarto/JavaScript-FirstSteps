@@ -7,9 +7,30 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
+    <div id="app">
+        <p>{{ link }}</p>
+        <p><a href="{{ link }}">Não funciona (falta v-bind)</a></p>
+        <p><a v-bind:href="link">Funciona!</a></p>
+        <p><a :href="link">Tb Funciona!</a></p>
+        <p>
+            <input type="text" v-model="nome"><br>
+            <span>{{ nome }}</span>
+        </p>
+    </div>
 
     <script>
-        // ...
+        new Vue({
+            el: "#app",
+            data: {
+                nome: "Maria",
+                link: "https://youtube.com/cod3rcursos"
+            },
+            watch: {
+                nome(novoValor) {
+                    console.log(novoValor.toUpperCase());
+                }
+            }
+        })
     </script>
 </body>
 </html>
