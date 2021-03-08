@@ -1,5 +1,6 @@
 aside.menu-area {
-    background-color: var(--bg-dark);
+    /* background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%); */
+    background-color: #4388c4; /* var(--bg-dark); */
     box-shadow: 
         2px 0 10px 0 rgba(0, 0, 0, 0.12),
         2px 0 15px 0 rgba(0, 0, 0, 0.09);
@@ -14,7 +15,12 @@ aside.menu-area {
 }
 
 .menu a:hover {
-    background: linear-gradient(135deg, #07a7e3 0%, #32dac3 100%);
+    background: #283048;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /* background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%); */
+    /* background: linear-gradient(135deg, #07a7e3 0%, #32dac3 100%); */
 }
 
 
