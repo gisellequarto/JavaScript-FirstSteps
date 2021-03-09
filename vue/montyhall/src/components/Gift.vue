@@ -38,7 +38,7 @@ export default {
     position: absolute;
     width: 10px;
     height: 85px;
-    background-color: #2C3E50;
+    background-color: #FFE985;
 }
 
 .gift-tie-2 {
@@ -46,6 +46,6 @@ export default {
     top: 40px;
     width: 90px;
     height: 10px;
-    background-color: #2C3E50;
+    background-color: #FFE985;
 }
 </style>
