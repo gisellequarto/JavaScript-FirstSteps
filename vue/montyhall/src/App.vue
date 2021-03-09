@@ -10,7 +10,14 @@ import Door from "./components/Door";
 
 export default {
   name: "App",
-  components: { Door }
+  components: { Door },
+   data: function() {
+        return {
+            started: false,
+            portsAmount: 3,
+            selectedPort: null
+        }
+    }
 };
 </script>
 
