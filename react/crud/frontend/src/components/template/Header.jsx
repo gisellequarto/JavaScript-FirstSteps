@@ -10,4 +10,5 @@ const header = props => {
             </header>
 }
 
+//dá erro se exportar anonimo
 export default header;
