@@ -2,9 +2,19 @@ db.estados.find()
 db.estados.find().pretty()
 db.estados.findOne()
 db.estados.findOne({sigla: "RJ"})
+
+// com OR ... ATENÇÃO a sintaxe!
 db.estados.find({$or: [{sigla: "RJ"}, {sigla: "AC"}]}).pretty()
+
+// se existe
 db.estados.find({populacao: {$exists: true}}).pretty()
+
+//delimita o resultado (limit) ou pula algum registro (skip)
+//podem ser usados agregados
 db.estados.find().skip(1).limit(2)
+
 db.estados.count()
+
+//com o 1 vai estar presente e com 0 não vai estar
 db.estados.find({sigla: "SP"}, {nome: 1, sigla: 1, _id: 0})
 db.estados.find({sigla: "SP"}, {"cidades.nome": 1, _id: 0})
