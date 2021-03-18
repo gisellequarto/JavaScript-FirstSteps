@@ -12,5 +12,8 @@ db.estados.insert({
 })
 
 db.estados.find()
+
+//mostra em formato JSON
+
 db.estados.find().pretty()
 db.help()
