@@ -1,6 +1,10 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 //const bodyParser = require('body-parser')
+
+const saudacao = require('./saudacaoMid');
+
+app.use(saudacao('João'))
 
 app.use((req, res, next) => {
     console.log('Antes...');
