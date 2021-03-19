@@ -2,13 +2,13 @@ const express = require('express')
 const app = express()
 //const bodyParser = require('body-parser')
 
-app.use((req, res, next) => {
-    console.log('Antes...')
-    next()
+app.use('/opa', (req, res, next) => {
+    console.log('Antes...');
+    next();
 })
 
 app.get('/opa', (req, res, next) => {
-    console.log('Durante...')
+    console.log('Durante...');
     res.json({
         data: [
             {id: 7, name: 'Ana', position: 1 },
@@ -21,7 +21,7 @@ app.get('/opa', (req, res, next) => {
         status: 200
     })
 
-    next()
+    next();
     
     // res.json({
     //     name: 'iPad 32Gb',
@@ -29,10 +29,13 @@ app.get('/opa', (req, res, next) => {
     //     discount: 0.12
     // })
 
-    // res.send('<h1>Estou bem!</h1><br><br><h2>Tipo é HTML!</h2>')
+    // res.send('<h1>Estou bem!</h1><br><br><h2>Tipo é HTML!</h2>');
 })
 
+app.use('/opa', (req, res) => {
+    console.log('Depois...');
+})
 
 app.listen(3000, () => {
-    console.log('Backend executando...')
+    console.log('Backend executando...');
 })
