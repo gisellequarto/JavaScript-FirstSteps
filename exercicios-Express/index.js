@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 //const bodyParser = require('body-parser')
 
-app.use('/opa', (req, res, next) => {
+app.use((req, res, next) => {
     console.log('Antes...');
     next();
 })
@@ -32,7 +32,7 @@ app.get('/opa', (req, res, next) => {
     // res.send('<h1>Estou bem!</h1><br><br><h2>Tipo é HTML!</h2>');
 })
 
-app.use('/opa', (req, res) => {
+app.use((req, res) => {
     console.log('Depois...');
 })
 
