@@ -3,10 +3,16 @@ const app = express();
 const bodyParser = require('body-parser');
 
 const saudacao = require('./saudacaoMid');
+const usuarioApi = require('./api/usuario');
+//const produtoApi = require('./api/produto');
 
-app.use(bodyParser.text())
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.post('/usuario', usuarioApi.salvar);
+app.get('/usuario', usuarioApi.obter);
+
+
+app.use(bodyParser.text());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
